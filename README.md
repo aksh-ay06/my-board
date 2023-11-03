@@ -6,6 +6,8 @@ A Openboard clone in which changes made to one instance are visible to all the o
 
 Node & Express : Simple backend to facilitate socket.io server action 
 
+Socket.io : used websockets using socket.io to implement bidirectional low latency data broadcast to all the other active instances of the webapp.
+
 HTML,CSS and Vanilla Javascript: Fronted Created using HTML,CSS and javascript.
 
 Previous instance was deployed in heroku but after changes since November 2022 the instance is deployed on render.

@@ -128,7 +128,7 @@ function dragAndDrop(element, event) {
 
     moveAt(event.pageX, event.pageY);
 
-    // moves the ball at (pageX, pageY) coordinates
+    // moves the element at (pageX, pageY) coordinates
     // taking initial shifts into account
     function moveAt(pageX, pageY) {
         element.style.left = pageX - shiftX + 'px';
@@ -139,10 +139,10 @@ function dragAndDrop(element, event) {
         moveAt(event.pageX, event.pageY);
     }
 
-    // move the ball on mousemove
+    // move the element on mousemove
     document.addEventListener('mousemove', onMouseMove);
 
-    // drop the ball, remove unneeded handlers
+    // drop the element, remove unneeded handlers
     element.onmouseup = function () {
         document.removeEventListener('mousemove', onMouseMove);
         element.onmouseup = null;

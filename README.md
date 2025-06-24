@@ -17,9 +17,11 @@ As of now, there is also similar project on the repo by the name of Excalidraw o
 
 #Steps to run the project on the local machine 
 
-change the following line found in the index.html document to the backend server address for your local machine it might look something like http://localhost:3000 which will enable the socket client module to make connect with the socket server module on your local machine.
-
-let socket = io.connect("https://openboard-clone-wlv5.onrender.com");
+run `npm install` and `npm start`.
+Open http://localhost:3000 which will create a new board and redirect you to a
+unique URL. Share this URL with other users so that they join the same board.
+The client automatically connects to the correct board based on the URL so no
+code changes are required.
 
 
 Akshay Patel

@@ -50,8 +50,12 @@ canvas.addEventListener("mouseup", (e) => {
     mouseDown = false;
 
     let url = canvas.toDataURL();
+    // remove states ahead of the current track position before pushing
+    if (track < undoRedoTracker.length - 1) {
+        undoRedoTracker.splice(track + 1);
+    }
     undoRedoTracker.push(url);
-    track = undoRedoTracker.length-1;
+    track = undoRedoTracker.length - 1;
 })
 
 undo.addEventListener("click", (e) => {
